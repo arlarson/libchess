@@ -44,6 +44,8 @@ add_library(
     src/undomove.cpp
 )
 
+target_include_directories(libchess-static PUBLIC ./src/)
+
 # Add the shared library
 add_library(
     libchess-shared
@@ -68,6 +70,8 @@ add_library(
     src/squares_attacked.cpp
     src/undomove.cpp
 )
+
+target_include_directories(libchess-shared PUBLIC ./src/)
 
 # Add the test executable
 add_executable(
